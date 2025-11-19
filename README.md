@@ -354,48 +354,6 @@ Liste os certificados instalados:
 sudo certbot certificates
 ```
 
----
-
-## 🧩 Módulos do Apache
-
-### Listar Módulos Carregados
-
-```bash
-httpd -M
-```
-
-ou
-
-```bash
-apachectl -M
-```
-
-### Habilitar Módulo mod_rewrite
-
-```bash
-sudo nano /etc/httpd/conf.modules.d/00-base.conf
-```
-
-Certifique-se de que esta linha existe:
-
-```apache
-LoadModule rewrite_module modules/mod_rewrite.so
-```
-
-### Habilitar Módulo mod_ssl
-
-```bash
-sudo dnf install mod_ssl -y
-```
-
-### Reiniciar Após Mudanças
-
-```bash
-sudo systemctl restart httpd
-```
-
----
-
 ## 🔍 Troubleshooting
 
 ### Problema: Apache não inicia
